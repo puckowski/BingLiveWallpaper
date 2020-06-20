@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.puckowski.bing.wallpaper" 
+	android:versionCode="6" 
+	android:versionName="0.0.0.4" >
+	
+    <uses-permission android:name = "android.permission.INTERNET" />
+    <uses-permission android:name = "android.permission.ACCESS_WIFI_STATE" />
+    
+    <uses-sdk android:minSdkVersion="7" 
+        android:targetSdkVersion="8" />
+    
+	<uses-feature android:name="android.software.live_wallpaper"
+		android:required="true" >	
+	</uses-feature>
+	
+	<application android:icon="@drawable/ic_launcher" 
+	    android:label="@string/wallpaper_name" >	
+		
+		<service android:name=".BingWallpaperService" 
+		    android:enabled="true"
+			android:permission="android.permission.BIND_WALLPAPER" 
+			android:label="Bing Wallpaper" >
+				
+				<intent-filter>
+					<action android:name="android.service.wallpaper.WallpaperService" />					
+				</intent-filter>
+				
+				<meta-data android:name="android.service.wallpaper"
+					android:resource="@xml/wallpaperdefinitions" >
+				</meta-data>
+						
+		</service>
+		
+		<activity android:label="@string/wallpaper_name" 
+		    android:name=".BingPreferenceActivity"
+			android:exported="true" >
+				
+		</activity>
+		
+	</application>
+	
+</manifest> 

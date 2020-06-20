@@ -1,0 +1,26 @@
+<?xml version = "1.0" 
+	encoding = "utf-8"?>
+	
+<resources>
+    <string-array name = "countryentries">
+        <item>United States</item>
+        <item>Australia</item>
+        <item>Canada</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>International</item>
+        <item>Japan</item>
+        <item>United Kingdom</item>
+	</string-array>
+	
+	<string-array name = "countryvalues">
+		<item>en-US</item>
+		<item>en-AU</item>
+		<item>en-CA</item>
+		<item>fr-FR</item>
+		<item>de-DE</item>
+		<item>en-WW</item>
+		<item>ja-JP</item>
+		<item>en-GB</item>
+	</string-array>
+</resources>
